@@ -1,9 +1,10 @@
 {
     "configurations": [
         {
-            "name": "C#: Launch Startup Project",
+            "name": "Potato Application",
             "type": "dotnet",
-            "request": "launch"
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Potato.Gui/Potato.Gui.csproj"
         }
     ]
 }

@@ -1,14 +1,25 @@
 # Avalonia on .NET Platform
 
+## Introduction
+
+This is a template project for the development of an application:
+
+* .NET Platform
+* Avalonia GUI Framework
+
+It is the companion project of
+
+* https://github.com/future2r/tomato
+
 ## Prerequisites
-
-Install the .NET platform:
-
-    winget install --id Microsoft.DotNet.SDK.8
 
 Install VS Code:
 
     winget install --id Microsoft.VisualStudioCode
+
+Install the .NET platform:
+
+    winget install --id Microsoft.DotNet.SDK.8
 
 ## Setup Project
 
