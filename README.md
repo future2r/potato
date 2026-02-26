@@ -19,7 +19,7 @@ Install VS Code:
 
 Install the .NET platform:
 
-    winget install --id Microsoft.DotNet.SDK.8
+    winget install --id Microsoft.DotNet.SDK.10
 
 ## Setup Project
 
@@ -45,11 +45,15 @@ Add the refence to the Core to the Gui:
 
     dotnet add Potato.Gui/Potato.Gui.csproj reference Potato.Core/Potato.Core.csproj
 
-## Build and Run
+## Build, Test and Run
 
 Build the project:
 
     dotnet build
+
+Run the tests:
+
+    dotnet test
 
 Run the application:
 
