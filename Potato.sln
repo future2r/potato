@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Potato.Core", "Potato.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Potato.Gui", "Potato.Gui\Potato.Gui.csproj", "{6EF9E39B-067D-4714-BC0F-84BFD16AA44A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Potato.Gui.Tests", "Potato.Gui.Tests\Potato.Gui.Tests.csproj", "{8A2F1C3D-4B5E-6F7A-8C9D-0E1F2A3B4C5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{6EF9E39B-067D-4714-BC0F-84BFD16AA44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EF9E39B-067D-4714-BC0F-84BFD16AA44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EF9E39B-067D-4714-BC0F-84BFD16AA44A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2F1C3D-4B5E-6F7A-8C9D-0E1F2A3B4C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2F1C3D-4B5E-6F7A-8C9D-0E1F2A3B4C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2F1C3D-4B5E-6F7A-8C9D-0E1F2A3B4C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2F1C3D-4B5E-6F7A-8C9D-0E1F2A3B4C5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
