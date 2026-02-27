@@ -1,15 +1,16 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Potato.Gui.ViewModels"
+        xmlns:res="using:Potato.Gui.Resources"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Potato.Gui.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/potato.ico"
-        Title="Potato.Gui"
-        Width="600"
-        Height="500">
+        Title="{x:Static res:Strings.WindowTitle}"
+        Width="700" Height="500"
+        MinWidth="300" MinHeight="250">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -17,6 +18,36 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <DockPanel>
+        <!-- Status Bar at the bottom -->
+        <Border DockPanel.Dock="Bottom" Padding="10">
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <TextBlock Text="{x:Static res:Strings.OperatingSystemLabel}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding OperatingSystem}" VerticalAlignment="Center"/>
+                <Separator Width="1" Height="12" VerticalAlignment="Stretch"/>
+                <TextBlock Text="{x:Static res:Strings.RuntimeLabel}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Runtime}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
 
+        <!-- Main Content Area - fills remaining space -->
+        <Grid RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*,Auto" Margin="10">
+            <!-- New Variety Section -->
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Target="{Binding #NewVarietyInput}" Content="{x:Static res:Strings.NewVarietyLabel}" Margin="0,0,0,5" VerticalAlignment="Center"/>
+            
+            <TextBox x:Name="NewVarietyInput" Grid.Row="1" Grid.Column="0" Margin="0,0,5,10" Padding="5" Text="{Binding VarietyToAdd, Mode=TwoWay}"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="{x:Static res:Strings.AddButton}" Padding="10,5" Margin="0,0,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding AddVarietyCommand}" IsDefault="True"/>
+            
+            <!-- Varieties Section -->
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Target="{Binding #VarietiesList}" Content="{x:Static res:Strings.VarietiesLabel}" Margin="0,0,0,5" VerticalAlignment="Top"/>
+            
+            <!-- List and Buttons -->
+            <ListBox x:Name="VarietiesList" Grid.Row="3" Grid.Column="0" Margin="0,0,10,0" ItemsSource="{Binding Varieties}" SelectedItems="{Binding SelectedVarieties}" SelectionMode="Multiple" KeyDown="VarietiesList_KeyDown"/>
+            
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Spacing="5" HorizontalAlignment="Stretch">
+                <Button Content="{x:Static res:Strings.RemoveButton}" Padding="10,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding RemoveCommand}"/>
+                <Button Content="{x:Static res:Strings.RemoveAllButton}" Padding="10,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding RemoveAllCommand}"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>
