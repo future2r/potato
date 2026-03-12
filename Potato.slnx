@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Potato.Core/Potato.Core.csproj" />
+  <Project Path="Potato.Gui/Potato.Gui.csproj" />
+  <Project Path="Potato.Gui.Tests/Potato.Gui.Tests.csproj" />
+</Solution>

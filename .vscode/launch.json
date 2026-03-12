@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Potato",
+            "preLaunchTask": "build",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/Potato.Gui/bin/Debug/net10.0/Potato.Gui.dll",
+            "cwd": "${workspaceFolder}/Potato.Gui",
+        },
+        {
+            "name": "Potato (English)",
+            "preLaunchTask": "build",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/Potato.Gui/bin/Debug/net10.0/Potato.Gui.dll",
+            "cwd": "${workspaceFolder}/Potato.Gui",
+            "args": [
+                "--lang=en-US"
+            ]
+        },
+        {
+            "name": "Potato (German)",
+            "preLaunchTask": "build",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/Potato.Gui/bin/Debug/net10.0/Potato.Gui.dll",
+            "cwd": "${workspaceFolder}/Potato.Gui",
+            "args": [
+                "--lang=de-DE"
+            ]
+        }
+    ]
+}
