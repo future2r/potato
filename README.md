@@ -9,8 +9,10 @@ This is a template project for the development of a desktop application:
 
 It is the companion project of
 
-* https://github.com/future2r/tomato
+* https://github.com/future2r/cioccolato
 * https://github.com/future2r/gelato
+* https://github.com/future2r/macchiato
+* https://github.com/future2r/tomato
 
 ## Prerequisites
 
@@ -79,6 +81,8 @@ The project is organized as a .NET solution with three projects:
     * `Assets/` - Application icons
 * `Potato.Gui.Tests/` - Unit tests (xUnit, FluentAssertions)
 * `Design/` - Design assets (ICO and PNG in various sizes)
+
+The view-model class is named `MainWindowViewModel` and backs a `MainWindow` (Avalonia's root view is a `Window`). The other tutorial projects use `MainViewModel` (tomato, macchiato), `MainWindowViewModel` (cioccolato) or `MainPageViewModel` (gelato), following each framework's root view type.
 
 ## Project Setup
 
